@@ -3,6 +3,9 @@ ALiaaS
 
 ALiaaS is an home automation project. It will considerate each house's element as service provider. 
 
+Technologies
+============
+
 At this point, ALiaaS uses : 
  - HTML5/CSS UI based on twitter bootstrap/jQuery/jQuery-UI 
  - Node.js observator

@@ -1,0 +1,392 @@
+{
+   "name" : "CPE Lyon",
+   "rooms" : {
+      "C322" : {
+         "devices" : {
+            "1" : {
+               "address" : "1",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "69",
+                        "y" : "339"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "69",
+               "y" : "339"
+            },
+            "10" : {
+               "address" : "10",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "331",
+                        "y" : "339"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "331",
+               "y" : "339"
+            },
+            "11" : {
+               "address" : "11",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "432",
+                        "y" : "423"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "1",
+               "x" : "432",
+               "y" : "413"
+            },
+            "12" : {
+               "address" : "12",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "531",
+                        "y" : "342"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "1",
+               "x" : "531",
+               "y" : "342"
+            },
+            "13" : {
+               "address" : "13",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "329",
+                        "y" : "242"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "329",
+               "y" : "242"
+            },
+            "15" : {
+               "address" : "15",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "531",
+                        "y" : "239"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "1",
+               "x" : "531",
+               "y" : "239"
+            },
+            "16" : {
+               "address" : "16",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "328",
+                        "y" : "134"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "328",
+               "y" : "134"
+            },
+            "17" : {
+               "address" : "17",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "428",
+                        "y" : "77"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "1",
+               "x" : "428",
+               "y" : "77"
+            },
+            "18" : {
+               "address" : "18",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "529",
+                        "y" : "133"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "1",
+               "x" : "529",
+               "y" : "133"
+            },
+            "19" : {
+               "address" : "19",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "30",
+                        "y" : "30"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "30",
+               "y" : "30"
+            },
+            "2" : {
+               "address" : "2",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "157",
+                        "y" : "417"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "157",
+               "y" : "417"
+            },
+            "20" : {
+               "address" : "20",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "291",
+                        "y" : "31"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "291",
+               "y" : "31"
+            },
+            "21" : {
+               "address" : "21",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "557",
+                        "y" : "461"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "1",
+               "x" : "557",
+               "y" : "461"
+            },
+            "3" : {
+               "address" : "3",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "247",
+                        "y" : "339"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "247",
+               "y" : "339"
+            },
+            "4" : {
+               "address" : "4",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "67",
+                        "y" : "241"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "67",
+               "y" : "241"
+            },
+            "6" : {
+               "address" : "6",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "246",
+                        "y" : "243"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "246",
+               "y" : "243"
+            },
+            "7" : {
+               "address" : "7",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "68",
+                        "y" : "137"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "68",
+               "y" : "137"
+            },
+            "8" : {
+               "address" : "8",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "154",
+                        "y" : "79"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "154",
+               "y" : "79"
+            },
+            "9" : {
+               "address" : "9",
+               "description" : "",
+               "filename" : "./devices_img/AQm1TY3hTr.png",
+               "moduleName" : "chaconled",
+               "services" : [
+                  {
+                     "point" : {
+                        "x" : "246",
+                        "y" : "135"
+                     },
+                     "radius" : "100",
+                     "type" : "2",
+                     "url" : "./devices_img/AQm1TY3hTr.png"
+                  }
+               ],
+               "state" : "0",
+               "x" : "246",
+               "y" : "135"
+            }
+         },
+         "height" : "600",
+         "name" : "C322",
+         "width" : "500"
+      }
+   }
+}
