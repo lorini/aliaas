@@ -4,7 +4,7 @@ ALiaaS
 Description
 -----------
 
-ALiaaS is an home automation project. It will considerate each house's element as a service provider. 
+ALiaaS is an home automation project. It will considerate each house's element as a service provider. More information (in french) at http://www.aliaas.fr/
 
 Technologies
 ------------
@@ -14,6 +14,8 @@ At this point, ALiaaS uses :
  - Node.js observator
  - C++ linux daemon
  - PHP Proxy
+
+The goal is to use only one technologie on the server side. Node.js ? 
 
 Contact
 =======
@@ -33,7 +35,7 @@ ALiaaS has been created within CPE Lyon project by F. Jumel and G. Lorini. CPE L
 License
 -------
 
-ALiaaS is under The MIT License (MIT)
+**ALiaaS is under The MIT License (MIT)**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  
