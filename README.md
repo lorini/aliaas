@@ -1,10 +1,13 @@
 ALiaaS
 ======
 
+Description
+-----------
+
 ALiaaS is an home automation project. It will considerate each house's element as a service provider. 
 
 Technologies
-============
+------------
 
 At this point, ALiaaS uses : 
  - HTML5/CSS UI based on twitter bootstrap/jQuery/jQuery-UI 
@@ -12,6 +15,10 @@ At this point, ALiaaS uses :
  - C++ linux daemon
  - PHP Proxy
 
+Contact
+=======
+
+Gulian : [@gulian](http://twitter.com/gulian), [github-aliaas@gulian.fr](github-aliaas@gulian.fr) 
 
 Copyright and License
 =====================
