@@ -17,6 +17,46 @@ At this point, ALiaaS uses :
 
 The goal is to use only one technologie on the server side. Node.js ? 
 
+Installation
+============
+
+Install node.js
+---------------
+
+### Debian or Ubuntu
+```
+apt-get install node  
+```
+You need `node`, `npm` and `git`
+
+Install ALiaaS 
+--------------
+
+### With Git
+
+```
+git clone git@github.com:lorini/aliaas.git
+cd aliaas
+npm install
+node app
+```
+
+### Direct download 
+
+```
+wget https://github.com/lorini/aliaas/zipball/master
+unzip aliaas*
+cd aliaas*
+npm install 
+node app
+```
+
+Test
+----
+
+Then visit `http://localhost:3000`
+
+
 Contact
 =======
 
