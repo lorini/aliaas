@@ -12,7 +12,7 @@ function AliaasBase() {
     * mise à jour est faite par Node.JS côté serveur. 
     *
     * @attribute house
-    * @type array
+    * @type array 
     * @default null
     */ 
     this.house = null ; 
@@ -66,7 +66,8 @@ function AliaasBase() {
     **/
     this.command = function() {
         var device = { address: $("#address").val()};
-        $.post("command.php?action=" + $("#action").val(), {device: device});
+        this.socket.emit('command', device); 
+        //$.post("command.php?action=" + $("#action").val(), {device: device});
         return this ;
     }
 
@@ -101,11 +102,11 @@ function AliaasBase() {
             $.each(room.devices, function (indiceDevice, device) {
                 if (device.state == 1) {
                     var light_bulb_on  = new Image ;
-                    light_bulb_on.src  = "images/light_on.png" ;
+                    light_bulb_on.src  = "img/light_on.png" ;
                     light_bulb_on.onload = function(){ctx.drawImage(light_bulb_on, device.x - 16, device.y - 16)};   
                 } else { 
                     var light_bulb_off  = new Image ;
-                    light_bulb_off.src  = "images/light_off.png" ;
+                    light_bulb_off.src  = "img/light_off.png" ;
                     light_bulb_off.onload = function(){ctx.drawImage(light_bulb_off, device.x - 16, device.y - 16)};       
                 }
             });

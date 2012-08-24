@@ -29,6 +29,36 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 
-http.createServer(app).listen(app.get('port'), function(){
+var server = http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
+
+var io = require('socket.io').listen(server),
+    fs = require('fs'), 
+    aliaasdSocket = require('net') ;   
+
+var housePath = "./aliaasd/house.json" ;
+
+var house = fs.readFileSync(housePath, 'ascii'); 
+
+io.sockets.on('connection', function (socket) { 
+  
+  /* A la connexion d'un navigateur on envoie le fichier JSON */
+  socket.emit('house', house); 
+
+  socket.on('command', function(command){
+    /* Connexion au serveur ALiaaSd */
+    var aliaasd = aliaasdSocket.connect(2000, function(){
+      aliaasd.write(command);
+      console.log("commande envoyée");
+    }); 
+  });
+
+  /* A chaque changement du contenu du fichier JSON, on envoie son contenu (intégral) sur la socket */
+  fs.watchFile(housePath, function(curr,prev) {
+    house = fs.readFileSync(housePath, 'ascii'); 
+    socket.emit('house', house); 
+  });
+
+});                                            
+

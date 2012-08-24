@@ -7,25 +7,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" type="text/css" href="css/aliaas.base.css"/>
-    <link href="stylesheet/bootstrap.css" rel="stylesheet">
-    <link href="stylesheet/bootstrap-responsive.css" rel="stylesheet">
+    <link href="stylesheets/aliaas.base.css" rel="stylesheet" />
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
 
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/aliaas.js"></script>
-    <script src="js/aliaas.home.js"></script>
-    <script src="js/heatmap.js"></script>
-    <script src="js/json.js"></script>
-    <script src="http://banane.cpe.fr:8080/socket.io/socket.io.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-button.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+
+    <script src="javascripts/jquery-1.7.1.min.js"></script>
+    <script src="javascripts/aliaas.js"></script>
+    <script src="javascripts/aliaas.home.js"></script>
+    <script src="javascripts/heatmap.js"></script>
+    <script src="javascripts/bootstrap-tooltip.js"></script>
+    <script src="javascripts/bootstrap-button.js"></script>
 
     <script type="text/javascript">
 
       var aliaas; 
       $(function () {
           aliaas = new AliaasHome();
-          aliaas.connect("banane.cpe.fr", 8080, function(){aliaas.draw();}); 
+          aliaas.connect("localhost", 3000, function(){aliaas.draw();}); 
           aliaas.initUI(); 
       });
 
