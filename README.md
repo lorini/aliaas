@@ -11,9 +11,8 @@ Technologies
 
 At this point, ALiaaS uses : 
  - HTML5/CSS UI based on twitter bootstrap/jQuery/jQuery-UI 
- - Node.js observator
+ - Node.js proxy and observator
  - C++ linux daemon
- - PHP Proxy
 
 The goal is to use only one technologie on the server side. Node.js ? 
 
@@ -27,7 +26,7 @@ Install node.js
 ```
 apt-get install node  
 ```
-You need `node`, `npm` and `git`
+
 
 Install ALiaaS 
 --------------
@@ -54,7 +53,7 @@ node app
 Test
 ----
 
-Then visit `http://localhost:3000`
+Visit `http://localhost:3000`
 
 
 Contact
