@@ -62,3 +62,15 @@ io.sockets.on('connection', function (socket) {
 
 });                                            
 
+var api = require('./api');
+var mongoose = require('mongoose'); 
+
+mongoose.connect('mongodb://localhost/aliaas', function(err){if(err) console.log(err);});
+
+api.removeAll();
+api.post() ;
+api.post() ;
+api.post() ;
+api.get() ;
+
+app.get('/switch/:state/:address?', api.switch);
