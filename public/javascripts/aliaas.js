@@ -65,9 +65,10 @@ function AliaasBase() {
     * @chainable
     **/
     this.command = function() {
-        var device = { address: $("#address").val()};
-        this.socket.emit('command', device); 
-        //$.post("command.php?action=" + $("#action").val(), {device: device});
+        var command = { address: $("#address").val() , action : $("#action").val() };
+        //this.socket.emit('command', command); 
+        //OR 
+        $.get("switch/" + $("#action").val() + "/" +$("#address").val());
         return this ;
     }
 

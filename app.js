@@ -10,6 +10,9 @@ var express = require('express')
 
 var app = express();
 
+var api = require('./api');
+var mongoose = require('mongoose'); 
+
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -48,10 +51,10 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('command', function(command){
     /* Connexion au serveur ALiaaSd */
-    var aliaasd = aliaasdSocket.connect(2000, function(){
+    /*var aliaasd = aliaasdSocket.connect(2000, function(){
       aliaasd.write(command);
       console.log("commande envoyée");
-    }); 
+    });*/
   });
 
   /* A chaque changement du contenu du fichier JSON, on envoie son contenu (intégral) sur la socket */
@@ -62,8 +65,7 @@ io.sockets.on('connection', function (socket) {
 
 });                                            
 
-var api = require('./api');
-var mongoose = require('mongoose'); 
+
 
 mongoose.connect('mongodb://localhost/aliaas', function(err){if(err) console.log(err);});
 
