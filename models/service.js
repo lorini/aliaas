@@ -1,5 +1,5 @@
-var  mongoose = require('mongoose')
-   ,   Schema = mongoose.Schema
+var  mongoose = require('mongoose')   
+   , Schema = mongoose.Schema
    , ObjectId = Schema.ObjectId ;
 
 var serviceSchema =  new Schema({
@@ -12,5 +12,21 @@ var serviceSchema =  new Schema({
 	imageUrl : String , 
 	imageB64 : Buffer  
 });
-  
-module.exports = mongoose.model('Service', serviceSchema);
+
+serviceSchema.methods.put = function(req, res){
+
+}
+
+serviceSchema.methods.get = function(req, res){
+
+}
+
+serviceSchema.methods.update = function(req, res){
+
+}
+
+serviceSchema.methods.delete = function(req, res){
+
+}  
+
+module.exports = serviceSchema;

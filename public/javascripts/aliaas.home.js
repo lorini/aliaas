@@ -44,7 +44,7 @@ function AliaasHome() {
         var points = this.heatmap.store.exportDataSet().data;
         var json_text = JSON.stringify(points, null, 2);
 
-        $.post("command.php?action=algov0", {
+        $.post("algorythm/v0/", {
             image: $("canvas").not("#roomCanvas")[0].toDataURL("image/png"),
             action: "heatpoints",
             heatmap: points

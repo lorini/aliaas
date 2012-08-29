@@ -1,19 +1,16 @@
 var  mongoose = require('mongoose')
    ,   Schema = mongoose.Schema
    , ObjectId = Schema.ObjectId
-   , serviceSchema  = require("./service");
-
+   , serviceSchema  = require("./service")
+   , protocolSchema = require("./protocol");
 
 var deviceSchema = new Schema({
 	address  : String, 
-	state    : { type: Boolean, default: false}, 
-	brand    : {
-		name 	 : String, 
-		protocol : String 
-	} ,
+	state    : { type: Boolean, default: false }, 
+	protocol : [protocolSchema],
 	position : {
-		x : Number ,
-		y : Number
+		x : { type : Number, default : 0 } ,
+		y : { type : Number, default : 0 } 
 	} , 
 	services : [serviceSchema], 
 	positioned : Boolean 
@@ -60,5 +57,21 @@ deviceSchema.methods.switchOff = function(){
 
     } else console.log("Device "+ this.address+" already switched off.")	
 }
-  
-module.exports = mongoose.model('Device', deviceSchema);
+
+deviceSchema.methods.put = function(req, res){
+
+}
+
+deviceSchema.methods.get = function(req, res){
+
+}
+
+deviceSchema.methods.update = function(req, res){
+
+}
+
+deviceSchema.methods.delete = function(req, res){
+	console.log("j'ai tout compris ! ");
+}
+
+module.exports = deviceSchema ;

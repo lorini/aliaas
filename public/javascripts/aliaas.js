@@ -1,52 +1,11 @@
-/**
-* Classe de la page principale d'ALiaaS 
-* 
-* @class AliaasBase 
-* @constructor
-**/
 function AliaasBase() {
   
-    /**
-    * Descripteur de la maison. Ce JSON est mis à jour à chaque fois 
-    * que le fichier "house.json" est modifié sur le serveur. Cette 
-    * mise à jour est faite par Node.JS côté serveur. 
-    *
-    * @attribute house
-    * @type array 
-    * @default null
-    */ 
     this.house = null ; 
-    
-    /**
-    * Websocket de SocketIO qui va permettre de se connecter au 
-    * serveur Node.JS pour mettre à jour l'attribut 'house'.
-    *
-    * @attribute socket
-    * @type socket
-    * @default null
-    */
     this.socket = null ;
-    
-    
-    /**
-    * Valeur de la dispersion de la lumière pour le dessin du 
-    * cercle d'incidence des lampes. 
-    *
-    * @attribute lampGradientValues
-    * @type array
-    * @default {  0.00 : 1,0.12 : 0.87, 0.25 : 0.48,0.37 : 0.19,0.50 : 0.13, 0.62 : 0.10,0.75 : 0.09,0.87 : 0.07, 0.99 : 0.06, 1 : 0.01 }
-    */
     this.lampGradientValues = {  0.00 : 1,0.12 : 0.87, 0.25 : 0.48,0.37 : 0.19,0.50 : 0.13, 
                                  0.62 : 0.10,0.75 : 0.09,0.87 : 0.07, 0.99 : 0.06, 1 : 0.01 };
 
-    /**
-    * Connect to Node.JS for updating the house. 
-    *
-    * @method connect
-    * @param {string} host Adresse du serveur ou NodeJs est en execution
-    * @param {integer} port Port du serveur sur lequel NodeJs est en execution
-    * @chainable
-    **/
+
     this.connect = function(host, port, updateCallback){
         that = this ; 
         this.socket = io.connect(host, {port:port}); 
@@ -58,27 +17,11 @@ function AliaasBase() {
         return this ; 
     }
 
-    /**
-    * Envoi une commande au proxy.
-    * 
-    * @method command
-    * @chainable
-    **/
     this.command = function() {
-        var command = { address: $("#address").val() , action : $("#action").val() };
-        //this.socket.emit('command', command); 
-        //OR 
         $.get("switch/" + $("#action").val() + "/" +$("#address").val());
         return this ;
     }
 
-    /**
-    * Dessin l'état du système sur le canvas $('#roomCanvas') à partir de
-    * la variable 'house'.
-    * 
-    * @method draw
-    * @chainable
-    **/
     this.draw = function () {
         that = this ;
         var ctx = $('#roomCanvas')[0].getContext("2d");
