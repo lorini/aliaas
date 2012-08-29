@@ -1,5 +1,9 @@
-var Device = require('./models/device.js');
-var House  = require('./models/house.js');
+var mongoose = require("mongoose") ; 
+    mongoose.connect('mongodb://localhost/aliaas', function(err){if(err) console.log(err);});
+
+var Device   = mongoose.model('Device'  , require('./models/device.js'  ));
+var Service  = mongoose.model('Service' , require('./models/service.js' ));
+var Protocol = mongoose.model('Protocol', require('./models/protocol.js'));
 
 exports.removeAll = function(req, res){
   Device.remove(function(err, num){
@@ -7,18 +11,16 @@ exports.removeAll = function(req, res){
   });
 }
 
-exports.post = function(req, res) {
-  new Device({ address : 1 , brand   : { name : "Chacon", protocol : "HomeEasy"}}).save() ; 
-}
+exports.postExample = Device.post ; 
 
 exports.get = function(req, res){
+  new Device({address:1}).save() ; 
   Device.find(function(err, results){
-    console.log(results);
+    res.send(results); 
   })
 }
 
 exports.switch = function(req, res){
-  
   Device.find({ address : req.params.address }, function(err, devices){
     devices.forEach(function(device) { 
       switch(req.params.state){
@@ -27,7 +29,5 @@ exports.switch = function(req, res){
       }  
     });
   });
-
-  res.send("")
-
+  res.send({message:"Command executed."})
 }

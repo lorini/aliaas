@@ -4,7 +4,7 @@ ALiaaS
 Description
 -----------
 
-ALiaaS is an home automation project. It will considerate each house's element as a service provider. More information (in french) at http://www.aliaas.fr/
+ALiaaS is an multi-protocol home automation project. It will considerate each house's element as a service provider. More information (in french) at http://www.aliaas.fr/
 
 Technologies
 ------------

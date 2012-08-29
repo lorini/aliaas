@@ -1,17 +1,11 @@
-
-/**
- * Module dependencies.
- */
-
-var express = require('express')
-  , routes = require('./routes')
-  , http = require('http')
-  , path = require('path');
-
-var app = express();
-
-var api = require('./api');
-var mongoose = require('mongoose'); 
+var express       = require('express')
+  , http          = require('http')
+  , path          = require('path')
+  , fs            = require('fs')
+  , aliaasdSocket = require('net') 
+  , api           = require('./api')
+  , routes        = require('./routes')
+  , app           = express(); 
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -24,55 +18,28 @@ app.configure(function(){
   app.use(app.router);
   app.use(require('less-middleware')({ src: __dirname + '/public' }));
   app.use(express.static(path.join(__dirname, 'public')));
-});
-
-app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
+app.get( '/'                        , routes.index );
+app.get( '/get'                     , api.get      );
+app.get( '/youpi'                   , api.get      ); // Ok avec get mais pas avec postExample
+app.get( '/switch/:state/:address?' , api.switch   );
+app.post('/algorithm/:version?'     , api.algorithm);
 
 var server = http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log("ALiaaSd server listening on port " + app.get('port'));
 });
 
-var io = require('socket.io').listen(server),
-    fs = require('fs'), 
-    aliaasdSocket = require('net') ;   
-
-var housePath = "./aliaasd/house.json" ;
-
-var house = fs.readFileSync(housePath, 'ascii'); 
+var io = require('socket.io').listen(server)
+var house = fs.readFileSync("house.json", 'ascii'); 
 
 io.sockets.on('connection', function (socket) { 
-  
-  /* A la connexion d'un navigateur on envoie le fichier JSON */
   socket.emit('house', house); 
-
-  socket.on('command', function(command){
-    /* Connexion au serveur ALiaaSd */
-    /*var aliaasd = aliaasdSocket.connect(2000, function(){
-      aliaasd.write(command);
-      console.log("commande envoyée");
-    });*/
-  });
-
-  /* A chaque changement du contenu du fichier JSON, on envoie son contenu (intégral) sur la socket */
-  fs.watchFile(housePath, function(curr,prev) {
-    house = fs.readFileSync(housePath, 'ascii'); 
+  fs.watchFile("house.json", function(curr,prev) {
+    house = fs.readFileSync("house.json", 'ascii'); 
     socket.emit('house', house); 
   });
-
-});                                            
-
-
-
-mongoose.connect('mongodb://localhost/aliaas', function(err){if(err) console.log(err);});
+});   
 
 api.removeAll();
-api.post() ;
-api.post() ;
-api.post() ;
-api.get() ;
-
-app.get('/switch/:state/:address?', api.switch);
