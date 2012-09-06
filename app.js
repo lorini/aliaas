@@ -22,8 +22,11 @@ app.configure(function(){
 });
 
 app.get( '/'                        , routes.index );
-app.get( '/get'                     , api.get      );
-app.get( '/youpi'                   , api.get      ); // Ok avec get mais pas avec postExample
+
+app.post( '/device'                  , api.device.post );
+app.get(  '/device'                  , api.device.get  );
+
+
 app.get( '/switch/:state/:address?' , api.switch   );
 app.post('/algorithm/:version?'     , api.algorithm);
 

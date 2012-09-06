@@ -15,7 +15,11 @@ var deviceSchema = new Schema({
 	services : [serviceSchema], 
 	positioned : Boolean 
   });
-     
+ 
+deviceSchema.methods.get = function(req, res){
+	console.log("get"); 
+}    
+
 deviceSchema.methods.switchOn = function(){
 	that = this ; 
 	if(this.state == 0){

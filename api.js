@@ -5,13 +5,15 @@ var Device   = mongoose.model('Device'  , require('./models/device.js'  ));
 var Service  = mongoose.model('Service' , require('./models/service.js' ));
 var Protocol = mongoose.model('Protocol', require('./models/protocol.js'));
 
+exports.device = Device ; 
+
 exports.removeAll = function(req, res){
   Device.remove(function(err, num){
     console.log(num + " device(s) erased."); 
   });
 }
 
-exports.postExample = Device.post ; 
+
 
 exports.get = function(req, res){
   new Device({address:1}).save() ; 
